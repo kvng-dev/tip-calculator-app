@@ -1,4 +1,6 @@
 const btns = document.querySelectorAll(".btn");
+const customInput = document.querySelector(".custom");
+const reset = document.getElementById("reset");
 
 // console.log({ Bill: totalBill.value, person: totalPersons.
 
@@ -6,9 +8,17 @@ function calculateTip(value) {
   const totalBill = parseFloat(document.getElementById("bill").value);
   const totalPersons = parseFloat(document.getElementById("person").value);
 
-  if (totalPersons === 0) {
-    console.log("Value cannot be zero");
+  const totalPersonsInput = document.querySelector("#person");
+  const errorMessage = document.querySelector("#error");
+
+  if (totalPersons == 0) {
+    // document.getElementById("person").style.border = "red";
+    totalPersonsInput.style.border = "2px solid red";
+    errorMessage.style.display = "inline-block";
     return;
+  } else {
+    totalPersonsInput.style.border = "";
+    errorMessage.style.display = "";
   }
 
   console.log(totalBill, totalPersons);
@@ -28,4 +38,16 @@ btns.forEach((button) => {
     const value = parseFloat(e.target.value);
     calculateTip(value);
   });
+});
+
+customInput.addEventListener("input", (e) => {
+  const value = parseFloat(e.target.value) / 100;
+  if (!isNaN(value)) {
+    calculateTip(value);
+  }
+});
+
+reset.addEventListener("click", () => {
+  document.getElementById("tip").innerHTML = "$0.00";
+  document.getElementById("total").innerHTML = "$0.00";
 });

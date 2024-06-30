@@ -57,11 +57,8 @@ svg {
   font-size: 16px;
 }
 
-input::-webkit-input-placeholder {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  font-size: 15px;
+.custom::-webkit-input-placeholder {
+  text-align: center;
 }
 
 .custom {
@@ -80,6 +77,12 @@ input::-webkit-input-placeholder {
   gap: 0.5rem;
   margin-top: 10px;
   margin-bottom: 35px;
+}
+
+.zero {
+  margin-left: 90px;
+  color: crimson;
+  display: none;
 }
 
 .tip .btn {
@@ -150,17 +153,17 @@ input::-webkit-input-placeholder {
     display: flex;
     font-size: 19px;
     padding: 10px;
-    margin: 0 30px;
+    margin: 0 10px;
   }
   .container {
     flex-direction: row;
     height: 700px;
     width: 100%;
-    padding: 20px;
-    margin: 30px;
+    padding: 20px 10px;
+    margin: 30px 0;
   }
   .bill-contain label {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
   }
 
@@ -177,6 +180,17 @@ input::-webkit-input-placeholder {
     grid-template-columns: repeat(2, 150px);
     grid-template-rows: 40px 40px;
     margin-bottom: 80px;
+  }
+
+  svg {
+    top: 35px;
+  }
+
+  .tip {
+    padding: 0 20px;
+  }
+  .tip .btn {
+    font-size: 19px;
   }
   .total button {
     margin-bottom: 20px;
