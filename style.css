@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+}
+
+.container {
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  margin: 200px auto;
+  height: 400px;
+  width: 700px;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bill-contain {
+  flex: 1;
+  color: hsl(186, 14%, 43%);
+}
+
+svg {
+  position: absolute;
+  top: 28px;
+  left: 15px;
+}
+
+.bill-contain label {
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+}
+
+.bill {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.bill-contain .val {
+  width: 90%;
+  background: hsl(189, 41%, 97%);
+  border: none;
+  padding: 10px;
+  text-align: right;
+  display: block;
+  font-family: "Space Mono", monospace;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+input::-webkit-input-placeholder {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 15px;
+}
+
+.custom {
+  background: hsl(189, 41%, 97%);
+  border: none;
+  padding: 10px;
+  font-family: "Space Mono", monospace;
+  width: 100px;
+}
+
+.tip {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: 40px 40px;
+  height: 80px;
+  gap: 0.5rem;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+.tip .btn {
+  font-family: "Space Mono", monospace;
+  font-weight: 600;
+  background: hsl(183, 100%, 15%);
+  color: white;
+  border-radius: 3px;
+  border: none;
+}
+
+.tip .btn:hover {
+  background: aquamarine;
+  color: black;
+}
+
+.total {
+  flex: 1;
+  background: hsl(183, 100%, 15%);
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+}
+
+.total p {
+  color: white;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+.total span {
+  display: block;
+  color: grey;
+}
+
+.total button {
+  translate: 0 50px;
+  width: 100%;
+  padding: 10px;
+  background: aquamarine;
+  border: none;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.amt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cash {
+  color: aquamarine;
+  font-size: 24px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    /* height: 100vh;
+    width: 100vw; */
+    display: flex;
+    font-size: 19px;
+    padding: 10px;
+    margin: 0 30px;
+  }
+  .container {
+    flex-direction: row;
+    height: 700px;
+    width: 100%;
+    padding: 20px;
+    margin: 30px;
+  }
+  .bill-contain label {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .bill-contain .val {
+    width: 100%;
+  }
+  .custom {
+    width: 150px;
+    text-align: center;
+  }
+
+  .tip {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: 40px 40px;
+    margin-bottom: 80px;
+  }
+  .total button {
+    margin-bottom: 20px;
+  }
+  .attribution {
+    display: none;
+  }
+}
