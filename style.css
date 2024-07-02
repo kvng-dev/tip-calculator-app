@@ -29,7 +29,7 @@ body {
 
 svg {
   position: absolute;
-  top: 28px;
+  top: 25px;
   left: 15px;
 }
 
@@ -67,6 +67,7 @@ svg {
   padding: 10px;
   font-family: "Space Mono", monospace;
   width: 100px;
+  cursor: pointer;
 }
 
 .tip {
@@ -91,7 +92,9 @@ svg {
   background: hsl(183, 100%, 15%);
   color: white;
   border-radius: 3px;
+  font-size: 18px;
   border: none;
+  cursor: pointer;
 }
 
 .tip .btn:hover {
@@ -128,6 +131,7 @@ svg {
   font-weight: 700;
   border-radius: 2px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .amt {
@@ -171,19 +175,22 @@ svg {
     width: 100%;
   }
   .custom {
-    width: 150px;
+    width: 130px;
     text-align: center;
   }
 
   .tip {
     display: grid;
-    grid-template-columns: repeat(2, 150px);
+    grid-template-columns: repeat(2, 130px);
     grid-template-rows: 40px 40px;
     margin-bottom: 80px;
   }
 
   svg {
-    top: 35px;
+    top: 30px;
+  }
+  .zero {
+    margin-left: 45px;
   }
 
   .tip {

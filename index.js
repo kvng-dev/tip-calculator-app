@@ -18,7 +18,7 @@ function calculateTip(value) {
     return;
   } else {
     totalPersonsInput.style.border = "";
-    errorMessage.style.display = "";
+    errorMessage.style.display = "none";
   }
 
   console.log(totalBill, totalPersons);
